@@ -1,0 +1,34 @@
+.imdb-rating {
+	display: none;
+}
+
+.link {
+	width: 49%;
+	&:nth-of-type(3) {
+		display: none;
+	}
+}
+
+.mov_entry .right-info {
+	width: 33%;
+}
+
+.ellipsis:before {
+	content: normal;
+}
+
+.related-mov img, .pop-movie .legend {
+	height: 110px;
+	max-width: 73px;
+}
+
+.actor-starring .image-centered {
+	@include size(73px 110px);
+	img {
+		@include size(73px 110px);
+	}
+}
+
+.image-centered img {
+	height: 110px;
+}

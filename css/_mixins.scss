@@ -1,0 +1,32 @@
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin background-size($size) {
+	-webkit-background-size: $size;
+  	-moz-background-size: $size;
+  	-o-background-size: $size;
+  	background-size: $size;
+}
+
+@mixin logo($url, $width) {
+	background: $url no-repeat;
+	background-size: $width (0.4 * $width);
+	background-position: center;
+}
+
+@mixin positioning($position, $top, $right, $bottom, $left) {
+	position: $position;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+}
+
+@mixin dimensions($height, $width) {
+	height: $height;
+	width: $width;
+}

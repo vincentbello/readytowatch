@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>404: Not Found!</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" >
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset='UTF-8'>
+    <meta name='description' content="Want to watch a movie? Don't know where to find it? readyto.watch lets you search for your favorite movies and 
+    view their availability on various online purchase, rental and streaming services, like iTunes, Amazon, Netflix, and more.">
+    <meta name='keywords' content='streaming, stream, movies, watch movies online, online, rent, buy, iTunes, Amazon, Netflix, Crackle'>
+    <meta name='author' content='Vincent Bello'>
+    <base href='/'>
+<link rel="stylesheet" href="css/jquery/jquery.css">
+<link type="text/css" rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+<link type="text/css" rel="stylesheet" href="css/bootstrap/bootstrap-theme.min.css" />
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<link href='css/theme.css' rel='stylesheet' type='text/css' />
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<style>
+
+#logo {
+  position: fixed;
+top: 5px;
+left: 5px;
+width: 80px;
+height: 80px;
+margin: 0;
+border: solid 1px #ddd;
+border-radius: 3px;
+background-size: 60px 67px;
+}
+
+#logo:hover {
+  -webkit-box-shadow: 1px 1px 1px 0px rgba(198, 198, 198, 0.75);
+  -moz-box-shadow:    1px 1px 1px 0px rgba(198, 198, 198, 0.75);
+  box-shadow:         1px 1px 1px 0px rgba(198, 198, 198, 0.75);
+}
+
+.container {
+  margin-left:  auto;
+  margin-right:  auto;
+  margin-top: 30px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-md-push-3 {
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: 800;
+  border: none;
+}
+
+p {
+  font-size: 25px;
+}
+
+a {
+  font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+<a href="/"><div id="logo"></div></a>
+<div class="container text-center">
+ <div class="row">
+    <div class="col-md-12">
+      <h1>Whoops! File not found (404 error)</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-push-3">
+      <iframe width="800" height="500" src="http://www.youtube.com/embed/46Kv4rBJi68?autoplay=1"> </iframe>
+      <p>It looks like this page doesn't exist.<br> <a href="/">Return to the home page</a>!</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

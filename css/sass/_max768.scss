@@ -1,0 +1,168 @@
+body,#home,#navbar {
+	min-width: 0;
+}
+
+#nav-form {
+	min-width: 0;
+}
+
+.navigator {
+	margin-right: 10px;
+	.fa-bars {
+		font-size: 1.2em;
+	}
+}
+
+#nav-search { width: 50%; }
+
+#navbar .return-to-search { margin-left: 0; }
+
+.login-dropdown {
+	display: none;
+	&.reveal {
+		display: block;
+	}
+}
+
+.home-logos .logo {
+	width: 25%;
+}
+
+/*MOVIE PAGE*/
+
+.backdrop-container {
+	height: 440px;
+}
+
+.backdrop {
+	height: 440px;
+	background-position: center 75px;
+	background-size: auto 440px;
+}
+
+.movie-lg {
+	margin-top: 435px;
+}
+
+
+.poster-lg { width: 150px; }
+
+.img-box.lg {
+	@include size(150px 225px);
+}
+
+.mov-info {
+	@include margin(-195px 0 0 165px);
+	&-small {
+		font-size: 80%;
+	}
+}
+
+.left-info.lg {
+	width: 50%;
+}
+
+.right-info.lg {
+	width: 47.5%;
+}
+
+.tagline {
+	font-size: 90%;
+	margin-left: 40%;
+}
+
+.about { font-size: 16px; }
+
+.fav-button { margin-top: 110px; }
+
+.trailer {
+	@include margin(155px 29px 0);
+	&.no-trailer {
+		margin-top: 183px;
+	}
+}
+
+.starring {
+	width: 100%;
+	min-width: 0;
+	.actor-starring:nth-child(3), .actor-starring:nth-child(4) {
+		display: none;
+	}
+}
+
+.actor-starring {
+	width: 46%;
+	.image-centered img {
+		@include size(95px 143px);
+	}
+}
+
+.related-mov img, .pop-movie .legend {
+	height: 143px;
+	max-width: 95px;
+}
+
+.image-centered img {
+	height: 143px;
+}
+
+.mov_entry .left-info {
+	width: 100%;
+}
+
+.mov_entry .right-info, .border {
+	display: none; 
+}
+
+.result-info {
+	.movie-known-for {
+		width: 25%;
+		&:nth-of-type(5) {
+			display: none;
+		}
+	}
+}
+
+.link-section {
+	width: 49.2%;
+	@include padding(2%);
+}
+
+.login-jumbotron h1 {
+	font-size: 35px;
+}
+
+.jumbotron p {
+	font-size: 16px;
+}
+
+.login-jumbotron .well {
+	width: 93%;
+}
+
+.well {
+	@include padding(3%);
+}
+
+#p-form {
+	width: 60%;
+	font-size: 15px;
+}
+
+.form-group {
+	margin-bottom: 10px;
+}
+
+.form-control {
+	font-size: 16px;
+	@include padding(6px 3%);
+	width: 94%;
+}
+
+#p-button-submit {
+	width: 100%;
+}
+
+.help-popover-btn {
+	display: none;
+}

@@ -1,0 +1,190 @@
+#nav-form {
+	width: 94%
+}
+
+#nav-search {
+	float: right;
+	width: 45%;
+	font-size: 16px;
+	&:focus {
+		@include position(absolute, null 3% null null);
+		opacity: 1;
+		width: 91%;
+	}
+}
+
+#navbar .return-to-search {
+	@include position(absolute, null 10px null null);
+}
+
+#search-submit {
+	right: 3%;
+}
+
+
+#home-search {
+	width: 100%;
+	//width: 365px;
+	.form-group {
+		width: 355px;
+		@include margin(0 auto);
+		@include position(absolute, null 0 null 0);
+	}
+}
+
+#search {
+	width: 300px;
+}
+
+.related-mov {
+	width: 33.33%;
+}
+
+#logo-home {
+	background-size: 220px 36px;
+}
+
+.login-dropdown,.login-dropdown.reveal,.optional {
+	display: none;
+}
+
+.logo-header {
+	img {
+		width: 80%;
+	}
+}
+
+.social-media.left-nav {
+	position: initial;
+	width: 100%;
+	@include margin(0 0 10px);
+	h3 {
+		@include position(relative, -10px null null null);
+		font-size: 20px;
+		display: inline;
+	}
+	.social-icon {
+		@include margin(15px 5px);
+		@include size(60px 60px);
+		display: inline-block;
+		i {
+			font-size: 40px;
+			margin-top: 10px;
+		}
+
+	}	
+}
+
+.about-content {
+	width: 100%;
+	float: none;
+	margin-bottom: 10px;
+}
+
+
+
+.backdrop-container,.backdrop {
+	height: 300px;
+}
+
+.backdrop {
+	background-size: auto 300px;
+}
+
+.movie-lg {
+	margin-top: 295px;
+}
+
+.left-info.lg, .right-info.lg {
+	width: 100%;
+}
+
+.starring {
+	display: none;
+}
+
+.starring.reveal, .cast-scroll-right {
+	display: block;
+}
+
+.about {
+	border: none;
+	@include padding(0);
+	@include margin(170px 0 0 0);
+}
+
+.result-info {
+	.movie-known-for {
+		width: 50%;
+		&:nth-of-type(3), &:nth-of-type(4) {
+			display: none;
+		}
+	}
+}
+
+.actor-profile-lg {
+	.about {
+		margin-top: 0;
+	}
+}
+
+.info-section {
+	width: 98%;
+	border-bottom: 1px solid #e3e3e3;
+}
+
+.info-section:first-of-type {
+	border-right:none;
+}
+
+.cast-container .actor-starring {
+	width: 30%;
+}
+
+.link-section {
+	font-size: 14px;
+	height: auto;
+	margin-bottom: 15px;
+	min-height: 125px;
+}
+
+.movie-section h3 {
+	font-size: 21px;
+}
+
+.ellipsis {
+	height: 53px;
+}
+
+.ellipsis>:first-child {
+	@include padding(0);
+}
+
+.mov_entry {
+	font-size: 75%;
+}
+
+.cast:nth-of-type(3), .char:nth-of-type(3) {
+	display: none;
+}
+
+.cast, .char {
+	width: 50%;
+}
+
+.img-box {
+	width: 90px;
+}
+
+.mov_entry .img-box img {
+	height: 135px;
+}
+
+.mov_entry .title {
+	font-size: 150%;
+	line-height: 1.5;
+}
+
+#p-form {
+	width: 80%;
+}

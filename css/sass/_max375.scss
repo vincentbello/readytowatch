@@ -1,0 +1,210 @@
+body,#home,#navbar {
+	@include padding(0);
+	min-width: 320px;
+}
+
+#logo-home {
+	right: -50px;
+	width: 220px;
+}
+
+.home-logos .logo {
+	box-sizing: border-box;
+	width: 50%;
+}
+
+.login-dropdown,#return-to-top {
+	display: none;
+}
+
+.main p {
+	font-size: 22px;
+	width: 100%;
+}
+
+.main p.lg {
+	font-size: 26px;
+}
+
+.toggle-search {
+	font-size: 24px;
+}
+
+#nav-search:focus {
+	right: 11px;
+	width: 340px;
+}
+
+#nav-form .typeahead.dropdown-menu {
+	width: 366px;
+}
+
+#navbar {
+	.dropdown-menu {
+		width: 100%;
+		@include border-radius(0);
+		font-size: 14px;
+	}
+	.return-to-search {
+		display: none;
+	}
+	#logo-home {
+		background-size: 220px 36px;
+	}
+}
+
+#description {
+	font-size: 31px;
+}
+
+.col-40,.col-35, .col-40.home {
+	width:100%;
+	margin: 0;
+}
+
+h2 {
+	font-size: 25px;
+}
+
+#home-search, #home-search .form-group {
+	width: 100%;
+}
+
+#search {
+	@include border-radius(0px);
+	width: 100%;
+	border-left: none;
+	border-right: none;
+}
+
+#search-button {
+}
+
+#search-submit {
+	right: 1px;
+	opacity: 1;
+}
+
+.main .typeahead a {
+	font-size: 14px;
+}
+
+.result-info {
+	.movie-known-for {
+		display: none;
+	}
+}
+
+.mobile-disappear {
+	display: none;
+}
+
+.actor-profile-lg .mobile-mov-info {
+	margin-top: 155px;
+}
+
+.backdrop-container,.backdrop {
+	height: 250px;
+}
+
+.backdrop {
+	background-size: auto 250px;
+}
+
+.movie-lg {
+	margin-top: 245px;
+}
+
+.left-info.lg {
+	/*margin: 45px 0 0 -30px;*/
+}
+
+.tagline {
+	margin-left: 42%;
+	width: 35%;
+}
+
+.cast-container .actor-starring {
+	width: 45%;
+}
+
+.link-section {
+	width: 100%;
+	font-size: 13px;
+}
+
+.movie-section h3 {
+	font-size: 18px;
+}
+
+.about.original, .right-info.lg {
+	display: none;
+}
+
+.mobile-mov-info.reveal {
+	display: block;
+}
+
+.ellipsis, .cast-actors, .cast-characters, .more-info-button {
+	display: none;
+}
+
+.mov_entry .mov-info-small {
+	font-size: 85%;
+	width: 99%;
+	padding: 0;
+	margin-left: 1%;
+}
+
+.mov_entry .mov-info-small span {
+	border-bottom: none;
+}
+
+.pagination {
+	font-size: 14px;
+}
+
+.cast-scroll-right {
+	right: 0;
+}
+
+#navbar {
+	@include padding(0 3%);
+	width: 97%;
+}
+
+#container {
+	width: 100%;
+}
+
+.login-jumbotron {
+	width: 100%;
+}
+
+.login-jumbotron .well {
+	@include border-radius(0);
+}
+
+.related-mov {
+	width: 50%;
+}
+
+.logo-header {
+	img {
+		width: 97%;
+	}
+}
+
+.social-media.left-nav {
+	@include border-radius(0);
+	.social-icon {
+		@include size(50px 50px);
+		i {
+			font-size: 30px;
+		}
+	}
+	h3 {
+		top: -8px;
+		font-size: 18px;
+	}
+}

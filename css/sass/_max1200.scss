@@ -1,0 +1,13 @@
+#pop-movies {
+	h1 {
+		@include size(100% null);
+		@include padding(0);
+	}
+	.nav-tabs {
+		display: inline-block;
+		@include position(relative, null -50% null null);
+		&>li {
+			@include position(relative, null null null -50%);
+		}
+	}
+}

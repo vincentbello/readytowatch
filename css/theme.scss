@@ -1,0 +1,263 @@
+@import "mixins";
+
+@charset "UTF-8";
+/* CSS Document */
+
+$primary-color: #c20427;
+$navbar-color: #f5f5f5;
+$borders-color: #e4e4e4;
+$success-color: green;
+// $nav-border-color: #
+
+$message-font-size: 16px;
+$primary-font-size: 14px;
+$small-font-size:   12px;
+
+// -------------------------------------------ALL PAGES------------------------------------------
+
+html {
+	font-family: 'Open Sans', sans-serif;
+	position: relative;
+	min-height: 100%;
+}
+
+body {
+	margin: 0 auto;
+	min-width: 980px;
+	padding: 0 3% 0 3%;
+	background: white;
+	margin-bottom: 2.5em;
+}
+
+#container { margin-top: 65px; }
+.container-selected { margin-left: 165px; }
+
+.footer {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	overflow: hidden;
+	@include dimensions(2.5em, 100%);
+	border-top: 1px solid $borders-color;
+	text-align: center;
+	font-size: $small-font-size;
+	color: $primary-color;
+	margin-top: 10px;
+}
+
+.dropdown-menu {
+    max-height: 300px;
+    overflow-y: auto;
+
+    &.typeahead {
+    	text-align: left;
+		width:32.5%;
+    }
+}
+
+textarea:focus, input:focus, a:focus{
+    outline: 0;
+}
+
+a:link {color:#c20427; text-decoration: none;}      /* unvisited link */
+a:visited {color:#c20427;}  /* visited link */
+a:hover {color:#c20427; text-decoration: underline;}  /* mouse over link */
+a:active {color:#c20427;}  /* selected link */
+
+#left-navbar {
+	@include dimensions(100%, 175px);
+	@include positioning(fixed, 51px, 0, 0, -195px);
+	max-height: 100%;
+	padding: 10px 0 15px 15px;
+	border: 1px solid $borders-color;
+	background: $navbar-color;
+	z-index: 100;
+	box-shadow: 5px 0 5px -5px #323232;
+}
+
+#logo {
+	float: left;
+	@include dimensions(36px, 85px);
+	margin: 5px 5px 0 0;
+	border: solid 1px transparent;
+	@include logo(url('../images/logo_100px.png'), 70px);
+
+	&:hover {
+		border-color: #c6c6c6;
+		@include border-radius(4px);
+		background-color: #f0f0f0;
+		box-shadow: 0 1px 0 rgba(0,0,0,0.10);
+	}
+}
+
+#long_bar {
+	position: fixed;
+	top: 0;
+	@include dimensions(50px, 100%);
+	min-width: 980px;
+	background: $navbar-color;
+	border: 1px solid $borders-color;
+	margin-left: -3%;
+	box-shadow: 0 5px 5px -5px #323232;
+	z-index: 10;
+
+	#nav {
+		border: 1px solid transparent;
+		font-size: 20px;
+		width: 36px;
+		padding: 5px 10px;
+		cursor: pointer;
+		color: $primary-color;
+		float: left;
+		margin: 5px 42px 0 2px;
+	
+		&:hover, .nav-selected {
+			border-color: #c6c6c6;
+			@include border-radius(4px);
+			background: #f0f0f0;
+			box-shadow: 0 1px 0 rgba(0,0,0,0.10);
+		}
+	}
+
+	#search {
+		position: absolute;
+		width: 100%;
+		font-size: 20px;
+	}
+
+	#nav-form {
+		float: left;
+		width: 65%;
+		min-width: 650px;
+		margin-left: 3%;
+	
+		#nav-search {
+			margin: 6px 0 5px 0px;
+			float: left;
+			@include dimensions(24px, 50%);
+			@include border-radius(3px);
+			border: 1px solid #afafaf;
+			-webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
+			box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
+			padding: 5px;
+			background: white;
+			opacity: 0.8;
+	
+			&:focus {
+				border-color: #c20427;
+				outline: 0;
+				-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(194, 4, 39, 0.6);
+				box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(194, 4, 39, 0.6);
+			}
+		}
+
+		#search-submit {
+			color: $primary-color;
+			position: absolute;
+			top: 6px;
+			@include dimensions(36px, 38px);
+			border-radius: 0 3px 3px 0; margin-left: -38px;
+			background-color: $borders-color;
+			border: 1px solid #afafaf;
+			cursor: pointer;
+			opacity: 0.8;
+
+			&:hover { background-color: whiteSmoke; color: $primary-color; }
+		}
+	}
+	// ------------------------ LOGIN FORM ------------------------------
+	
+	// -----------------------/ LOGIN FORM ------------------------------
+}
+	
+.autocomplete-container {
+	width: 100%;
+	position: relative;
+	top: 43px;
+	padding: 5px 12px;
+	color: black;
+	background-color: white;
+}
+
+.return-to-search { cursor: pointer; }
+
+#register-modal {
+	.form-control { width: 530px; }
+	.has-feedback .form-control { width: 496.25px; }
+	.reg-warning { font-size: 90%; color: #c20427;}
+	.form-control-feedback {
+		.fa-times { color: $primary-color; }
+		.fa-check { color: $success-color; }
+	}
+	#reg-success-message {margin-top: 15px; width: 100%; text-align: center; font-size: $message-font-size; color: $success-color;}
+}
+
+
+
+
+
+
+
+
+
+// ------------------------------------------/ALL PAGES------------------------------------------
+// -------------------------------------------HOME PAGE------------------------------------------
+
+#body-background {
+	background: url('../images/collage.png') no-repeat center center fixed; 
+  	@include background-size(cover);
+
+  	#body-background-opaque {
+  		@include dimensions(100%, 103%);
+  		@include positioning(absolute, 0, -3%, 0, 0);
+		background-color: black;
+		opacity: 0.8;
+		z-index: -1;
+  	}
+
+  	#long-bar { opacity: 0.5; }
+}
+
+.main {
+	background: none;
+	color: whiteSmoke;
+	margin: 80px auto;
+	text-align: center;
+	font-size: 120%;
+	width: 80%;
+	min-width: 805px;
+	
+	h1 {
+		font-size: 100px;
+		margin-bottom: 20px;
+		font-weight: bold;
+		font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	}
+
+	p {
+		font-weight: 500;
+		font-size: 30px;
+		width: 75%;
+		margin: 10px auto;
+	}
+
+	a { cursor: pointer; }
+
+	#index_logo {
+		background: url('../images/readytowatch.png') no-repeat center center;
+		background-size: 450px 273px;
+		@include dimensions(273px, 450px);
+		margin: 0 auto 10px auto;
+	}
+
+	#search-button {
+		float: right;
+		position: relative;
+		left: 26px;
+		font-size: 20px;
+		border-radius: 0 4px 4px 0;
+		@include dimensions(42px 42px);
+	}
+}
+
+

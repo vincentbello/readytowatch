@@ -1,0 +1,60 @@
+<?php
+
+require_once __DIR__ . '/../includes/mysqli_connect.php';
+
+$time_start = microtime(true); 
+
+set_time_limit(86400);
+
+$count = 0;
+$apikey = '2e44f5c2d522defe7f32d188e59fcaa8';
+if ($i = $mysqli->query("SELECT id FROM actors")) {
+	while ($actor = mysqli_fetch_assoc($i)) {
+		$backdrop = "";
+		$backdrop_id = 0;
+		$count++;
+		$endpoint = "https://api.themoviedb.org/3/person/".$actor['id']."/tagged_images?api_key=$apikey";
+		$session = curl_init($endpoint);
+		curl_setopt($session, CURLOPT_RETURNTRANSFER, true);
+		$data = curl_exec($session);
+		curl_close($session);
+		$m = json_decode($data);
+		if ($m === NULL) {
+			echo "Error parsing json, id " . $actor['id'];
+			continue;
+		}
+		if ($m->results[0]) {
+			foreach ($m->results as $b) {
+				if ($b->aspect_ratio > 1.7) {
+					$backdrop = $b->file_path;
+					$backdrop_id = $b->media->id;
+					break;
+				}
+
+			}
+		}
+
+		$query = "UPDATE actors SET backdrop='$backdrop', backdrop_id=$backdrop_id WHERE id=" . $actor['id'];
+		mysqli_query($mysqli, $query);
+	}
+}
+
+$mysqli->close();
+$time_end = microtime(true);
+$execution_time = ($time_end - $time_start);
+//execution time of the script
+
+// REPORTING
+echo "\n---------------------------\n\n";
+echo "Finished executing " . __FILE__ . " at " . date('g:i:s A') . " on " . date('F j, Y') . ".\n";
+echo "Total Execution Time: " . $execution_time/60 . " minutes (" . $execution_time/3600 . " hours)";
+if ($count) {
+	echo "\n" . $count . " requests in " . $execution_time . " seconds means 1 request in " . ($execution_time/$count) .
+	" seconds.";
+}
+echo "\n\n---------------------------\n";
+
+
+
+
+?>
